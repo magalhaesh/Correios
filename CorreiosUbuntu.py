@@ -50,7 +50,8 @@ class Correios(object):
          """
         try:
             conn = httplib.HTTPConnection("websro.correios.com.br")
-            conn.request("POST", "/sro_bin/txect01$.Inexistente", urllib.urlencode({'P_COD_LIS': numTracking, 'P_LINGUA': "001", 'P_TIPO': "002"}))
+            conn.request("POST", "/sro_bin/txect01$.Inexistente", 
+                urllib.urlencode({'P_COD_LIS': numTracking, 'P_LINGUA': "001", 'P_TIPO': "002"}))
             res = conn.getresponse()
 
         except:
